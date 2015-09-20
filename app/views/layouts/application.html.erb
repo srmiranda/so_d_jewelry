@@ -10,7 +10,6 @@
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBYSeuePH-Q0h18HUYP33spE3OCQHfnoi4"></script>
   </head>
 <body>
     <%= render "shared/topbar" %>
@@ -19,6 +18,7 @@
     <%= javascript_include_tag 'application' %>
     <%= yield :extra_footer %>
     <%= render "shared/footer" %>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBkRC6g3Ww5-0kTytlp-a4b3XptSGCyaG0"></script>
     <script>
       function initialize() {
         var mapCanvas = document.getElementById('map');
