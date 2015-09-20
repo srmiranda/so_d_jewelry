@@ -11,6 +11,14 @@
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBYSeuePH-Q0h18HUYP33spE3OCQHfnoi4"></script>
+  </head>
+<body>
+    <%= render "shared/topbar" %>
+    <%= yield %>
+
+    <%= javascript_include_tag 'application' %>
+    <%= yield :extra_footer %>
+    <%= render "shared/footer" %>
     <script>
       function initialize() {
         var mapCanvas = document.getElementById('map');
@@ -23,14 +31,5 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
-  </head>
-<body>
-    <%= render "shared/topbar" %>
-    <%= yield %>
-
-    <%= javascript_include_tag 'application' %>
-    <%= yield :extra_footer %>
-    <%= render "shared/footer" %>
-
   </body>
 </html>
