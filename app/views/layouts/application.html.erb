@@ -18,25 +18,23 @@
     <%= javascript_include_tag 'application' %>
     <%= yield :extra_footer %>
     <%= render "shared/footer" %>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkRC6g3Ww5-0kTytlp-a4b3XptSGCyaG0"></script>
     <script>
-      function initialize() {
-        var mapCanvas = document.getElementById('map');
-        var mapOptions = {
-          var myLatLng = {lat: 41.605975, lng: -70.941035};
-          center: new google.maps.LatLng(myLatLng),
-          zoom: 10,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(mapCanvas, mapOptions)
+      function initMap() {
+        var myLatLng = {lat: 41.605975, lng: -70.941035};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: myLatLng
+        });
+
         var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'So. D Jewelry'
-      });
+          position: myLatLng,
+          map: map,
+          title: 'So. D Jewelry'
+        });
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkRC6g3Ww5-0kTytlp-a4b3XptSGCyaG0"></script>
     <script>
     document.write('<script src=js/vendor/' +
     ('__proto__' in {} ? 'zepto' : 'jquery') +
