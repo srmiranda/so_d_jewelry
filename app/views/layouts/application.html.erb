@@ -18,7 +18,7 @@
     <%= javascript_include_tag 'application' %>
     <%= yield :extra_footer %>
     <%= render "shared/footer" %>
-    <script src="https://maps.googleapis.com/maps/api/js?key=GOOGLE_KEY"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=#{GOOGLE_KEY}"</script>
     <script>
       function initMap() {
         var myLatLng = {lat: 41.605975, lng: -70.941035};
