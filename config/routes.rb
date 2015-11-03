@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :repairs, only: [:index]
 
   resources :about, only: [:index]
+
+  resources :dune, only: [:index]
 end
