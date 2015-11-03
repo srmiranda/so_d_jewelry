@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :jewelry, only: [:index]
 
   resources :repairs, only: [:index]
+
+  resources :about, only: [:index]
 end
