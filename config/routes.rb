@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :about, only: [:index]
 
   resources :dune, only: [:index]
+
+  resources :suunto, only: [:index]
 end
