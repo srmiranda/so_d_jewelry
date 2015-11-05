@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :dune, only: [:index]
 
   resources :suunto, only: [:index]
+
+  resources :citizen, only: [:index]
 end
