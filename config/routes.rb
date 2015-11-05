@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :portugal, only: [:index]
 
   resources :rings, only: [:index]
+
+  resources :earrings, only: [:index]
 end
