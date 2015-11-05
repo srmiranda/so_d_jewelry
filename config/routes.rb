@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   resources :suunto, only: [:index]
 
   resources :citizen, only: [:index]
+
+  resources :portugal, only: [:index]
 end
