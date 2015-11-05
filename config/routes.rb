@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :citizen, only: [:index]
 
   resources :portugal, only: [:index]
+
+  resources :rings, only: [:index]
 end
